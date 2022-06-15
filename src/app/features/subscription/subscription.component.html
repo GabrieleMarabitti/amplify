@@ -1,0 +1,21 @@
+<div class="p-5">
+  <h2>Subscription</h2>
+  <app-card class="d-flex justify-content-between"
+  [subscriptions]="subscriptions"
+  (subEmitter)="openForm($event)"></app-card>
+</div>
+
+<div *ngIf="isSubscribe" class="d-flex p-5">
+  <div class="w-50">
+    <app-form></app-form>
+  </div>
+
+  <div class="p-5">
+    <h5>Summary</h5>
+    <ul class="list-group list-group-light">
+      <li class="list-group-item px-3 border-0 rounded-3 list-group-item-danger mb-2">Subscription  {{subscription?.subName}}</li>
+
+      <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">$  {{subscription?.subPrice}} / month</li>
+    </ul>
+  </div>
+</div>

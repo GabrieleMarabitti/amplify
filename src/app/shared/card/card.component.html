@@ -1,0 +1,13 @@
+
+<div class="card" style="width: 18rem;" *ngFor="let sub of subscriptions">
+  <h2>Logo</h2>
+  <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+  <div class="card-body">
+    <h3 class="card-title">{{sub.subName}}</h3>
+    <p class="card-text">{{sub.subDescription}}</p>
+    <i class="fa fa-info-circle text-warning"></i>
+    <h5 class="card-text">{{sub.subPrice}}</h5>
+    <button class="btn btn-primary" (click)="sendSub(sub)">BUY</button>
+  </div>
+</div>
+
