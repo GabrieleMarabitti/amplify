@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {FormControl, FormControlName, FormGroup} from "@angular/forms";
+import {User} from "../../core/model/user";
 
 @Component({
   selector: 'app-form',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  myForm : FormGroup
+  user : User
+  @Output() userEmitter : EventEmitter<User> = new EventEmitter<User>()
+
   constructor() { }
 
   ngOnInit(): void {
+    this.myForm = new FormGroup({
+      firstName : new FormControl(),
+      lastName : new FormControl(),
+      email : new FormControl(),
+      cardNumber : new FormControl(),
+      cvv : new FormControl()
+    })
   }
 
+  onSubmit() {
+    this.user = this.myForm.value
+    this.userEmitter.emit(this.user)
+  }
 }

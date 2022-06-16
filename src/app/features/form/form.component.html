@@ -1,36 +1,35 @@
-<form>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
   <!-- 2 column grid layout with text inputs for the first and last names -->
   <div class="row mb-4">
     <div class="col">
       <div class="form-outline">
         <label class="form-label" for="firstName">First name</label>
-        <input type="text" id="firstName" class="form-control" />
+        <input type="text" id="firstName" class="form-control" formControlName="firstName"/>
       </div>
     </div>
     <div class="col">
       <div class="form-outline">
         <label class="form-label" for="lastName">Last name</label>
-        <input type="text" id="lastName" class="form-control" />
+        <input type="text" id="lastName" class="form-control" formControlName="lastName"/>
       </div>
     </div>
   </div>
-
   <!-- Email input -->
   <div class="form-outline mb-4">
     <label class="form-label" for="email">Email address</label>
-    <input type="email" id="email" class="form-control" />
+    <input type="email" id="email" class="form-control" formControlName="email"/>
   </div>
 
   <!-- Card -->
   <div class="form-outline mb-4">
     <label class="form-label" for="cardNumber">Card number</label>
-    <input type="text" id="cardNumber" class="form-control" />
+    <input type="text" id="cardNumber" class="form-control" formControlName="cardNumber"/>
   </div>
 
   <!-- Cvv -->
   <div class="form-outline mb-4">
-    <label class="form-label" for="cvv">CVV</label>
-    <input type="text" id="cvv" class="form-control" />
+    <label class="form-label" for="cvv" >CVV</label>
+    <input type="text" id="cvv" class="form-control" formControlName="cvv"/>
   </div>
 
   <!-- Submit button -->

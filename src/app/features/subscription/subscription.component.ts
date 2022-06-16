@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Subscription, Subscriptions} from "../../core/model/subscription";
+import {User} from "../../core/model/user";
 
 @Component({
   selector: 'app-subscription',
@@ -18,6 +19,8 @@ export class SubscriptionComponent implements OnInit {
 
   isSubscribe : boolean = false
 
+  user : User
+
   constructor() { }
 
   ngOnInit(): void {
@@ -26,5 +29,11 @@ export class SubscriptionComponent implements OnInit {
   openForm($event: Subscription) {
     this.subscription = {...$event}
     this.isSubscribe = true
+  }
+
+  getUser($event: User) {
+    this.user = $event
+    console.log("ciaone")
+    console.log(this.user)
   }
 }
