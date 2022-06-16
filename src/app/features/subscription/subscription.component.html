@@ -1,9 +1,8 @@
-<div class="p-5">
-  <h2>Subscription</h2>
+<div class="sub-main">
   <app-card class="d-flex justify-content-between"
   [subscriptions]="subscriptions"
   (subEmitter)="openForm($event)"></app-card>
-</div>
+
 
 <div *ngIf="isSubscribe">
 
@@ -14,4 +13,5 @@
 
 
 
+</div>
 </div>

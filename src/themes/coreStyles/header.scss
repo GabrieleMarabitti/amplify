@@ -1,0 +1,45 @@
+nav {
+  background-color: rgb(195,10,65);
+  height: 7rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  width: 9rem;
+  left: 2rem;
+  top: 1rem;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  gap: 2rem;
+  padding-left: 0rem;
+  width: 100%;
+  padding-right: 5rem;
+  margin-left: 2rem;
+}
+
+.nav-button {
+  background-color: rgb(250, 250, 250);
+  border: none;
+  color: rgb(58, 58, 58);
+  text-transform: uppercase;
+  padding: 10px 0px;
+  width: 11rem;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 50vh;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+.nav-text {
+
+}

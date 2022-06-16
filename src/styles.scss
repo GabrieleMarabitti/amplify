@@ -1,1 +1,8 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "themes/coreStyles/header";
+@import "themes/coreStyles/home";
+@import "themes/sharedStyles/card";
+@import "themes/featuresStyles/form";
+
+main {
+  background-color: rgb(250,250,250);
+}

@@ -1,16 +1,16 @@
-<div class="p-5">
-    <h5>Summary</h5>
-    <ul class="list-group list-group-light">
-        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-danger mb-2">Subscription  {{subscription?.subName}}</li>
-        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">$  {{subscription?.subPrice}} / month</li>
-        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user?.firstName}}</li>
-        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user?.lastName}}</li>
-        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user?.email}}</li>
-        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user?.cardNumber | cardNumberCensoring}}</li>
-        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user?.cvv | cvvCensoring}}</li>
-        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user?.expiration | date: "MM - y"}}</li>
-    </ul>
-    <button class="btn btn-danger" (click)="cancelSubEmit()">Cancel</button>
-    <button class="btn btn-warning" (click)="modifySubEmit()">Modify</button>
-    <button class="btn btn-success">Continue</button>
+<h4 class="sub-card-title sub-form-title mb-5" style="margin-left: 1rem">Summary</h4>
+<div style="padding: 1rem">
+<p class="summary-name">{{user?.firstName}} {{user?.lastName}}</p>
+<p>{{user?.email}}</p>
+<p class="sub-description">{{user?.cardNumber | cardNumberCensoring}}</p>
+<p class="sub-description">{{user?.expiration | date: "MM - y"}}</p>
+</div>
+<div class="sub-summary-container">
+    <p>Subscription  {{subscription?.subName}}</p>
+    <p>$  {{subscription?.subPrice}} / month</p>
+</div>
+<div class="btn-container">
+<button class="btn-cancel" (click)="cancelSubEmit()">Cancel</button>
+<button class="btn-modify" (click)="modifySubEmit()">Modify</button>
+<button class="btn-continue">Continue</button>
 </div>

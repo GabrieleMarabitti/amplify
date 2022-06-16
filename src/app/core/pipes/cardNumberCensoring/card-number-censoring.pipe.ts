@@ -10,7 +10,7 @@ export class CardNumberCensoringPipe implements PipeTransform {
       return ""
     }
     let numb : string | undefined = value?.toString().substring(12)
-    return "**** - **** - **** - " + numb
+    return "**** \xa0 **** \xa0 **** \xa0 " + numb
   }
 
 }

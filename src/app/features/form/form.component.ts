@@ -22,9 +22,9 @@ export class FormComponent implements OnInit {
     this.myForm = new FormGroup({
       firstName : new FormControl(),
       lastName : new FormControl(),
-      email : new FormControl(Validators.required, Validators.email),
+      email : new FormControl(),
       cardNumber : new FormControl(),
-      cvv : new FormControl(Validators.required, Validators.minLength(3)),
+      cvv : new FormControl(),
       expiration : new FormControl()
     })
   }
