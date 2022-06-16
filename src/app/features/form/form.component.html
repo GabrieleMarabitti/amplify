@@ -1,3 +1,5 @@
+<div class="d-flex p-5">
+  <div class="w-50">
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
   <!-- 2 column grid layout with text inputs for the first and last names -->
   <div class="row mb-4">
@@ -45,8 +47,13 @@
 
   <!-- Submit button -->
   <div>
-  <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+  <button type="submit" class="btn btn-primary btn-block mb-4">Apply</button>
   </div>
 
 </form>
-
+  </div>
+  <div class="w-50">
+    <app-summary [user]="user" [subscription]="subscription" (voidEmitterCancel)="cancelSubEmit()"
+    (voidEmitterModify)="modifySub()"></app-summary>
+  </div>
+</div>

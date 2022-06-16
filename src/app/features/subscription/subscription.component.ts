@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Subscription, Subscriptions} from "../../core/model/subscription";
 import {User} from "../../core/model/user";
-import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-subscription',
@@ -42,4 +41,5 @@ export class SubscriptionComponent implements OnInit {
     this.subscription = undefined
     this.isSubscribe = false
   }
+
 }

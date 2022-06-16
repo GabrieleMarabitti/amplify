@@ -5,12 +5,13 @@
   (subEmitter)="openForm($event)"></app-card>
 </div>
 
-<div *ngIf="isSubscribe" class="d-flex p-5">
-  <div class="w-50">
-    <app-form
-    (userEmitter)="getUser($event)"></app-form>
-  </div>
+<div *ngIf="isSubscribe">
 
-  <app-summary
-  [user]="user" [subscription]="subscription" (voidEmitter)="cancelSub()"></app-summary>
+    <app-form
+    (userEmitter)="getUser($event)"
+    (cancelVoidEmit)="cancelSub()"
+    [subscription]="subscription"></app-form>
+
+
+
 </div>

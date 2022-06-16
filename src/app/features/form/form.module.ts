@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormComponent } from './form.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {SummaryModule} from "../summary/summary.module";
 
 
 
@@ -14,7 +15,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     ],
     imports: [
         CommonModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        SummaryModule
     ]
 })
 export class FormModule { }

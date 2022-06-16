@@ -12,8 +12,8 @@ export class SummaryComponent implements OnInit {
 
   @Input() user : User | undefined
   @Input() subscription : Subscription | undefined
-  @Output() voidEmitter : EventEmitter<void>  = new EventEmitter<void>()
-
+  @Output() voidEmitterCancel : EventEmitter<void>  = new EventEmitter<void>()
+  @Output() voidEmitterModify : EventEmitter<void>  = new EventEmitter<void>()
 
   constructor() { }
 
@@ -21,10 +21,10 @@ export class SummaryComponent implements OnInit {
   }
 
   cancelSubEmit() {
-    this.voidEmitter.emit()
+    this.voidEmitterCancel.emit()
   }
 
-  modifySub() {
-
+  modifySubEmit() {
+    this.voidEmitterModify.emit()
   }
 }

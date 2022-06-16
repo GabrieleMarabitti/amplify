@@ -1,6 +1,7 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {FormControl, FormControlName, FormGroup} from "@angular/forms";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {FormControl, FormControlName, FormGroup, Validators} from "@angular/forms";
 import {User} from "../../core/model/user";
+import {Subscription} from "../../core/model/subscription";
 
 @Component({
   selector: 'app-form',
@@ -11,7 +12,9 @@ export class FormComponent implements OnInit {
 
   myForm : FormGroup
   user : User
+  @Input() subscription : Subscription | undefined
   @Output() userEmitter : EventEmitter<User> = new EventEmitter<User>()
+  @Output() cancelVoidEmit : EventEmitter<void> = new EventEmitter<void>()
 
   constructor() { }
 
@@ -19,9 +22,9 @@ export class FormComponent implements OnInit {
     this.myForm = new FormGroup({
       firstName : new FormControl(),
       lastName : new FormControl(),
-      email : new FormControl(),
+      email : new FormControl(Validators.required, Validators.email),
       cardNumber : new FormControl(),
-      cvv : new FormControl(),
+      cvv : new FormControl(Validators.required, Validators.minLength(3)),
       expiration : new FormControl()
     })
   }
@@ -32,4 +35,11 @@ export class FormComponent implements OnInit {
     this.myForm.reset()
   }
 
+  cancelSubEmit() {
+    this.cancelVoidEmit.emit()
+  }
+
+    modifySub() {
+        this.myForm.patchValue(this.user)
+    }
 }
