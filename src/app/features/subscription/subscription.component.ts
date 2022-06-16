@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Subscription, Subscriptions} from "../../core/model/subscription";
 import {User} from "../../core/model/user";
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-subscription',
@@ -19,7 +20,7 @@ export class SubscriptionComponent implements OnInit {
 
   isSubscribe : boolean = false
 
-  user : User
+  user : User | undefined
 
   constructor() { }
 
@@ -33,7 +34,12 @@ export class SubscriptionComponent implements OnInit {
 
   getUser($event: User) {
     this.user = $event
-    console.log("ciaone")
-    console.log(this.user)
+    this.user.subscription = this.subscription
+  }
+
+  cancelSub() {
+    this.user = undefined
+    this.subscription = undefined
+    this.isSubscribe = false
   }
 }

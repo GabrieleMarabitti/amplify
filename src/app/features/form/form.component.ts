@@ -21,12 +21,15 @@ export class FormComponent implements OnInit {
       lastName : new FormControl(),
       email : new FormControl(),
       cardNumber : new FormControl(),
-      cvv : new FormControl()
+      cvv : new FormControl(),
+      expiration : new FormControl()
     })
   }
 
   onSubmit() {
     this.user = this.myForm.value
     this.userEmitter.emit(this.user)
+    this.myForm.reset()
   }
+
 }

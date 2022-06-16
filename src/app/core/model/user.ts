@@ -4,7 +4,8 @@ export interface User {
     firstName : string
     lastName : string
     email : string
-    cardNumber : string
+    cardNumber : number
     cvv : number
+    expiration : Date
     subscription? : Subscription
 }

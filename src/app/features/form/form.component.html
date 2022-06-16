@@ -23,13 +23,24 @@
   <!-- Card -->
   <div class="form-outline mb-4">
     <label class="form-label" for="cardNumber">Card number</label>
-    <input type="text" id="cardNumber" class="form-control" formControlName="cardNumber"/>
+    <input type="number" id="cardNumber" class="form-control" formControlName="cardNumber"/>
   </div>
 
   <!-- Cvv -->
-  <div class="form-outline mb-4">
-    <label class="form-label" for="cvv" >CVV</label>
-    <input type="text" id="cvv" class="form-control" formControlName="cvv"/>
+
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline mb-4">
+        <label class="form-label" for="cvv" >CVV</label>
+        <input type="number" id="cvv" class="form-control" formControlName="cvv"/>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <label class="form-label" for="expiration">Expiration</label>
+        <input type="date" id="expiration" class="form-control" formControlName="expiration"/>
+      </div>
+    </div>
   </div>
 
   <!-- Submit button -->
@@ -38,3 +49,4 @@
   </div>
 
 </form>
+

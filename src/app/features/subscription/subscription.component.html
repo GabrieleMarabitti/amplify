@@ -11,17 +11,6 @@
     (userEmitter)="getUser($event)"></app-form>
   </div>
 
-  <div class="p-5">
-    <h5>Summary</h5>
-    <ul class="list-group list-group-light">
-      <li class="list-group-item px-3 border-0 rounded-3 list-group-item-danger mb-2">Subscription  {{subscription?.subName}}</li>
-
-      <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">$  {{subscription?.subPrice}} / month</li>
-      <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user.firstName}}</li>
-      <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user.lastName}}</li>
-      <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user.email}}</li>
-      <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user.cardNumber}}</li>
-      <li class="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">{{user.cvv}}</li>
-    </ul>
-  </div>
+  <app-summary
+  [user]="user" [subscription]="subscription" (voidEmitter)="cancelSub()"></app-summary>
 </div>
