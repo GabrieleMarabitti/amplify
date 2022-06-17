@@ -9,7 +9,7 @@ nav {
   position: absolute;
   width: 9rem;
   left: 2rem;
-  top: 1rem;
+  top: 2.2rem;
 }
 
 ul {
@@ -40,6 +40,12 @@ ul {
   font-weight: bold;
 }
 
-.nav-text {
-
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 4rem;
+  background-color: rgb(195,10,65);
+  color: rgb(250,250,250);
+  padding-right: 4rem;
 }

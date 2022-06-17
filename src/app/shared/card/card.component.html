@@ -4,11 +4,11 @@
   <!--<img class="card-img-top" src="..." alt="Card image cap">-->
 
     <i class="fa fa-music fa-4x sub-icon"></i>
-    <h4 class="sub-card-title sub-title">{{sub.subName}}</h4>
-    <p class="sub-card-text sub-description">{{sub.subDescription}}</p>
-    <i class="fa fa-info-circle fa-2x sub-icon-info"></i>
-    <h5 class="sub-card-text">$ {{sub.subPrice}}</h5>
-    <button class="sub-button" (click)="sendSub(sub)">BUY</button>
+    <h4 class="sub-card-title sub-title my-0">{{sub.subName}}</h4>
+    <p class="sub-card-text sub-description-full my-0">{{sub.subDescription}}</p>
+    <i class="fa fa-info-circle fa-2x sub-icon-info" routerLink="/info"></i>
+    <h5 class="sub-card-text my-0">$ {{sub.subPrice}} <span class="sub-description">/ month</span></h5>
+    <button class="sub-button" (click)="sendSub(sub)">GET STARTED</button>
 
 </div>
 

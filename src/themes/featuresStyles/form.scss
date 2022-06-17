@@ -45,7 +45,8 @@
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  //margin-bottom: 2rem;
+  //margin-top: 4rem;
 }
 
 .summary-name {
@@ -57,6 +58,7 @@
 .btn-container {
   display: flex;
   justify-content: space-between;
+  //margin-top: 2rem;
 }
 
 .btn-cancel {
@@ -94,4 +96,57 @@
   font-weight: bold;
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.summary-items-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.confirm-container {
+  height: 112.5%;
+  margin: -2rem;
+  border-radius: 2rem;
+  background-color: rgb(195,10,65);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+  position: relative;
+}
+
+.confirm-img {
+  width: 25rem;
+}
+
+.confirm-container h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(250,250,250);
+}
+
+.confirm-container p {
+  font-size: 1.5rem;
+  color: rgb(203, 203, 203);
+}
+
+.confirm-container a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

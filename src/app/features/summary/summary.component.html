@@ -1,16 +1,31 @@
-<h4 class="sub-card-title sub-form-title mb-5" style="margin-left: 1rem">Summary</h4>
-<div style="padding: 1rem">
-<p class="summary-name">{{user?.firstName}} {{user?.lastName}}</p>
-<p>{{user?.email}}</p>
-<p class="sub-description">{{user?.cardNumber | cardNumberCensoring}}</p>
-<p class="sub-description">{{user?.expiration | date: "MM - y"}}</p>
+
+
+<div *ngIf="confirmation" class="summary-items-container">
+    <h4 class="sub-card-title sub-form-title mb-3" style="margin-left: 1rem">Summary</h4>
+    <div style="margin-left: 1rem">
+        <p class="summary-name">{{user?.firstName}} {{user?.lastName}}</p>
+        <p>{{user?.email}}</p>
+        <p class="sub-description">{{user?.cardNumber ? "Card:&nbsp;&nbsp;&nbsp;&nbsp;" + (user?.cardNumber | cardNumberCensoring) : ""}}</p>
+        <p class="sub-description">{{user?.cvv ? "CVV:&nbsp;&nbsp;&nbsp;&nbsp;" + (user?.cvv | cvvCensoring) : ""}}</p>
+        <p class="sub-description">{{user?.expiration ? "Expire date:&nbsp;&nbsp;&nbsp;&nbsp;" + (user?.expiration | date: "MM - y") : ""}}</p>
+    </div>
+
+    <div class="sub-summary-container">
+        <p>Subscription  {{subscription?.subName}}</p>
+        <p>$  {{subscription?.subPrice}} / month</p>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn-cancel" (click)="cancelSubEmit()">Cancel</button>
+        <button class="btn-modify" (click)="modifySubEmit()">Modify</button>
+        <button class="btn-continue"(click)="confirm()">Confirm</button>
+    </div>
+
 </div>
-<div class="sub-summary-container">
-    <p>Subscription  {{subscription?.subName}}</p>
-    <p>$  {{subscription?.subPrice}} / month</p>
-</div>
-<div class="btn-container">
-<button class="btn-cancel" (click)="cancelSubEmit()">Cancel</button>
-<button class="btn-modify" (click)="modifySubEmit()">Modify</button>
-<button class="btn-continue">Continue</button>
+
+<div *ngIf="!confirmation" class="confirm-container">
+    <a routerLink="/home"></a>
+    <h4>music is louder<br>than ever!</h4>
+    <p>Welcome to Amplify</p>
+    <img src="assets/confirmation.png" class="confirm-img">
 </div>

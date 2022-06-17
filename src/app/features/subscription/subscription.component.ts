@@ -10,9 +10,9 @@ import {User} from "../../core/model/user";
 export class SubscriptionComponent implements OnInit {
 
   subscriptions : Subscriptions = [
-    {id: 1, subName: "Base", subPrice: 9.99, subDescription: "Base plan"},
-    {id: 2, subName: "Premium", subPrice: 14.99, subDescription: "Premium plan"},
-    {id: 3, subName: "Diamond", subPrice: 19.99, subDescription: "Diamond plan"}
+    {id: 1, subName: "Base", subPrice: 9.99, subDescription: "Single account\nAd-free music\nPlay offline"},
+    {id: 2, subName: "Premium", subPrice: 14.99, subDescription: "2 Accounts\nAd-free music\nPlay offline"},
+    {id: 3, subName: "Diamond", subPrice: 19.99, subDescription: "4 Accounts\nAd-free music\nPlay offline"}
   ]
 
   subscription : Subscription | undefined

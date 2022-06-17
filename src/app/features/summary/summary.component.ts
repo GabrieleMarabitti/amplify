@@ -15,6 +15,8 @@ export class SummaryComponent implements OnInit {
   @Output() voidEmitterCancel : EventEmitter<void>  = new EventEmitter<void>()
   @Output() voidEmitterModify : EventEmitter<void>  = new EventEmitter<void>()
 
+  confirmation : boolean = true
+
   constructor() { }
 
   ngOnInit(): void {
@@ -27,4 +29,8 @@ export class SummaryComponent implements OnInit {
   modifySubEmit() {
     this.voidEmitterModify.emit()
   }
+
+    confirm() {
+       this.confirmation = false
+    }
 }

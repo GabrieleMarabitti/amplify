@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SummaryComponent } from './summary.component';
 import {PipesModule} from "../../core/pipes/pipes.module";
+import {RouterModule} from "@angular/router";
 
 
 
@@ -12,9 +13,10 @@ import {PipesModule} from "../../core/pipes/pipes.module";
   exports: [
     SummaryComponent
   ],
-  imports: [
-    CommonModule,
-    PipesModule
-  ]
+    imports: [
+        CommonModule,
+        PipesModule,
+        RouterModule
+    ]
 })
 export class SummaryModule { }

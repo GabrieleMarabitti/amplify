@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card.component';
+import {RouterModule} from "@angular/router";
 
 
 
@@ -12,7 +13,8 @@ import { CardComponent } from './card.component';
         CardComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        RouterModule
     ]
 })
 export class CardModule { }
