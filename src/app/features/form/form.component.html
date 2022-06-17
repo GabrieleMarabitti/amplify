@@ -7,14 +7,14 @@
     <div class="col">
       <div class="form-outline">
         <label class="form-label" for="firstName">First name</label>
-        <input type="text" id="firstName" class="form-control" formControlName="firstName" minlength="3" maxlength="20" required/>
-          <!--<small *ngIf="myForm.value.firstName.length < 3">Inserire almeno 3 caratteri</small>-->
+        <input type="text" id="firstName" class="form-control" formControlName="firstName" minlength="3" maxlength="20" required pattern="[a-z A-Z]+"/>
+          <!--<small *ngIf="myForm?.get('firstName')?.value.length < 3">Inserire almeno 3 caratteri</small>-->
       </div>
     </div>
     <div class="col">
       <div class="form-outline">
         <label class="form-label" for="lastName">Last name</label>
-        <input type="text" id="lastName" class="form-control" formControlName="lastName" minlength="3" maxlength="20" required/>
+        <input type="text" id="lastName" class="form-control" formControlName="lastName" minlength="3" maxlength="20" required pattern="[a-z A-Z]+"/>
       </div>
     </div>
   </div>
@@ -49,7 +49,8 @@
 
   <!-- Submit button -->
   <div>
-  <button type="submit" class="sub-button-form">Apply</button>
+  <button [ngClass]="myForm.valid ? 'sub-button-form' : 'btn-disabled'" type="submit"
+          [disabled]="myForm.invalid">Apply</button>
   </div>
 
 </form>

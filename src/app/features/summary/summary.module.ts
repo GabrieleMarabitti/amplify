@@ -5,7 +5,6 @@ import {PipesModule} from "../../core/pipes/pipes.module";
 import {RouterModule} from "@angular/router";
 
 
-
 @NgModule({
   declarations: [
     SummaryComponent

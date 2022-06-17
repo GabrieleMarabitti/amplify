@@ -1,0 +1,11 @@
+<div class="library-container">
+<div class="card-library-container">
+    <div class="card-library" *ngFor="let song of songs">
+        <img src="{{song.cover}}" class="song-cover">
+        <p class="song-title">{{song.title}}</p>
+        <p class="song-artist">{{song.artist}}</p>
+        <p class="song-lenght">{{song.songLenght}}</p>
+        <div class="d-flex justify-content-between w-75 song-details"><span>{{song.genre}}</span><span>{{song.year}}</span></div>
+    </div>
+</div>
+</div>

@@ -150,3 +150,16 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.btn-disabled {
+  background-color: rgb(232, 232, 232);
+  border: none;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 50vh;
+  color: rgb(58, 58, 58);
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: 40%;
+}

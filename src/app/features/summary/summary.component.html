@@ -17,14 +17,14 @@
 
     <div class="btn-container">
         <button class="btn-cancel" (click)="cancelSubEmit()">Cancel</button>
-        <button class="btn-modify" (click)="modifySubEmit()">Modify</button>
-        <button class="btn-continue"(click)="confirm()">Confirm</button>
+        <button [ngClass]="user ? 'btn-modify' : 'btn-disabled'" (click)="modifySubEmit()" [disabled]="!user">Modify</button>
+        <button [ngClass]="user ? 'btn-continue' : 'btn-disabled'" (click)="confirm()" [disabled]="!user">Confirm</button>
     </div>
 
 </div>
 
 <div *ngIf="!confirmation" class="confirm-container">
-    <a routerLink="/home"></a>
+    <a routerLink="/library"></a>
     <h4>music is louder<br>than ever!</h4>
     <p>Welcome to Amplify</p>
     <img src="assets/confirmation.png" class="confirm-img">
